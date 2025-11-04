@@ -5,12 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
-      - 'hotfix-*'
-      - 'feature/**' # ** = plusieurs niveaux de dossiers possibles
-  pull_request:
-    types:
-      - opened      
+      - main   
 jobs:
     test:
         runs-on: ubuntu-latest
