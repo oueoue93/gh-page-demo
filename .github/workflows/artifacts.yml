@@ -22,17 +22,17 @@ jobs:
           with:
             name: testing
             path: test.txt
-download-test:
-  name: Download Test
-  runs-on: ubuntu-latest
-  needs: test
-  steps:
-    - name: Download Test
-      uses: actions/download-artifact@v3
-      with:
-        name: testing
-    - name: Print Results
-      shell: bash
-      run: |
-      value= 'cat test.txt'
-      echo $value
+  download-test:
+    name: Download Test
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Download Test
+        uses: actions/download-artifact@v3
+        with:
+          name: testing
+      - name: Print Results
+        shell: bash
+        run: |
+          value= 'cat test.txt'
+          echo $value
