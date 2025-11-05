@@ -34,5 +34,5 @@ jobs:
       - name: Print Results
         shell: bash
         run: |
-          value= 'cat test.txt'
+          value= `cat test.txt`
           echo $value
